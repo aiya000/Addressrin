@@ -17,17 +17,20 @@
     <TableView fx:id="tableView"
         GridPane.columnIndex="0" GridPane.rowIndex="1">
         <columns>
-            <TableColumn text="Name">
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="200">
                 <cellValueFactory>
                     <PropertyValueFactory property="name"/>
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn text="Email">
+            <TableColumn text="Email" prefWidth="300">
                 <cellValueFactory>
                     <PropertyValueFactory property="email"/>
                 </cellValueFactory>
             </TableColumn>
         </columns>
+        <sortOrder>
+            <fx:reference source="nameColumn"/>
+        </sortOrder>
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <Address name="Kongo" email="tetoku.love@example.com"/>
