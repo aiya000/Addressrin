@@ -21,6 +21,9 @@
                 <cellValueFactory>
                     <PropertyValueFactory property="name"/>
                 </cellValueFactory>
+                <cellFactory>
+                    <control.FormattedTableCellFactory alignment="center"/>
+                </cellFactory>
             </TableColumn>
             <TableColumn text="Email" prefWidth="300">
                 <cellValueFactory>
